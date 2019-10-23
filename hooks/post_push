@@ -1,0 +1,8 @@
+#!/bin/bash
+
+NODE_10_IMAGE=$IMAGE_NAME-node-10
+NODE_12_IMAGE=$IMAGE_NAME-node-12
+
+docker tag $IMAGE_NAME $NODE_10_IMAGE
+docker push $NODE_10_IMAGE
+docker push $NODE_12_IMAGE

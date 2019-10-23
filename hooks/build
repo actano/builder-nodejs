@@ -1,0 +1,6 @@
+#!/bin/bash
+
+NODE_12_IMAGE=$IMAGE_NAME-node-12
+
+docker build --build-arg NODE_VERSION=10 -f $DOCKERFILE_PATH -t $IMAGE_NAME .
+docker build --build-arg NODE_VERSION=12 -f $DOCKERFILE_PATH -t $NODE_12_IMAGE .
