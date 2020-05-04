@@ -21,4 +21,6 @@ RUN curl -f https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cl
   mv google-cloud-sdk /usr/bin/
 ENV PATH=$PATH:/usr/bin/google-cloud-sdk/bin
 
+RUN apt-get update && apt-get install -y jq
+
 CMD ["docker", "version"]
